@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>DOM example</title>
+
+    <!-- 실행순서가 필요하다. -> window.onload 이벤트사용-->
+    <!-- <script>
+        document.querySelector("h1").style.background="red";
+    </script> -->
+    <script>
+        window.onload= function(){
+          //변수선언
+          var output="";
+          for (let index = 0; index < 10; index++) {
+              output+="<h1>header - "+index+"</h1>";
+          }
+          document.body.innerHTML=output;
+         // document.body.textContent=output;
+         // document.body.innerText=output;
+            //document.body.style.color="grey";
+            //document.body.style.backgroundColor="orange";
+
+            var headers = document.querySelectorAll("h1");
+                for (let index = 0; index < headers.length; index++) {
+                   var header = headers[index];
+                   header.style.backgroundColor="skyblue";
+                   header.style.color="white";
+                }
+            // for (let index = 0; index < headers.index; index++) {
+            //    var heder=headers[index];
+            //    header.style.backgroundColor= "skyblue";
+            // }
+            
+           
+            // header.innerHTML="<i>Macdonalde</i>"
+        }
+        
+    </script>
+</head>
+    <body>
+      
+    </body>
+    
+</html>

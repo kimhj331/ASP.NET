@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>DOM example</title>
+
+    <!-- 실행순서가 필요하다. -> window.onload 이벤트사용-->
+    <!-- <script>
+        document.querySelector("h1").style.background="red";
+    </script> -->
+    <script>
+        window.onload= function(){
+            // document.querySelector("h1").style.background="pink";
+            // document.querySelector("h2").style.color="blue";
+            
+            //01.getElementById
+            // var selector = document.getElementById("selector");
+            // selector.style.backgroundColor="grey";
+            // selector.style.color="white";
+            // selector.innerHTML="<i>Javascript</i> changed";
+
+            //02. querySelector
+            // var header = document.querySelector("h1");
+            // header.style.backgroundColor="red";
+            // header.style.color = "yellow";
+            // header.innerHTML="<i>Macdonalde</i>"
+
+             //03. querySelectorAll
+             var headers = document.querySelectorAll("h1");
+                for (let index = 0; index < headers.length; index++) {
+                   var header = headers[index];
+                   header.style.backgroundColor="grey";
+                   header.style.color="white";
+                   header.innerHTML="I'm header : "+index;
+                }
+        }
+        
+    </script>
+</head>
+    <body>
+        <h1> Lorem ipsum dolor sit amet</h1>
+        <h2> Lorem ipsum dolor sit amet</h2>
+
+        <h1 id="selector">TEST</h1>
+    </body>
+    
+</html>
