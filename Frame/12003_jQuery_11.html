@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8"/>
+        <title>jQuery</title>
+        <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function (){
+                var count = 0;
+                var image = $("#image");
+                var frames =[
+                    "0.png",  "1.png",  "2.png",  "3.png",
+                    "4.png",  "5.png",  "6.png",  "7.png",
+                    "8.png",  "9.png",  "10.png",  "11.png",
+                    "12.png",  "13.png",  "14.png"
+                ];
+            
+                setInterval(function(){
+                image.attr("src",frames[count % frames.length]);
+                count += 1;
+                }, 50);
+        });
+
+        </script>
+    </head>
+    <body>
+        <form>
+            <img id="image"/>
+        </form>
+    </body>
+</html>

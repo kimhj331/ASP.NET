@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>이벤트 예제</title>
+    <script>
+         window.onload = function () {
+            // 문서 객체를 선택합니다.
+            var button = document.getElementById('button1');
+
+            button.onclick = function () {
+                alert("익명함수 콜");
+            };
+
+            //다음과 같이 버튼클릭함수 적용가능
+            // button.onclick = buttonClick;
+
+            //링크 클릭시 이동하지않음(기본이벤트 삭제)
+            var link = document.getElementById('link');
+            link.onclick = function () {
+                return false;
+            };
+        };
+
+        // 이벤트를 연결합니다.
+        function buttonClick(){
+            alert("20200807 changed!!");
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="입력" onclick="buttonClick()">
+    <input type="button" id="button1" value="두번째"/><br/>
+    <a href="https://naver.com" id="link">네이버</a>
+</body>
+</html>
